@@ -1,0 +1,24 @@
+<div class="container">
+    <button (click)="getEmployees()"> Fetch Data Of Employees</button>
+    <h2>Data Of employees with Dynamic data with http Service</h2>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Employee_ID</th>
+                <th>Employee_name</th>
+                <th>Employee_salary</th>
+                <th>Employee_age</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let todo of employee">
+                <td>{{todo.id}}</td>
+                <td>{{todo.employee_name}}</td>
+                <td>{{todo.employee_salary}}</td>
+                <td>{{todo.employee_age}}</td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
