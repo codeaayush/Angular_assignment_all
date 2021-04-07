@@ -1,0 +1,39 @@
+<div class="container">
+    <h2>Data Of Employee With static data</h2>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Employye_Id</th>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Dept</th>
+                <th>City</th>
+                <th>Email</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of items">
+                <td>
+                    {{item.employee_id}}
+                </td>
+                <td>
+                    {{item.first_name}}
+                </td>
+                <td>
+                    {{item.last_name}}
+                </td>
+                <td>
+                    {{item.dept}}
+                </td>
+                <td>
+                    {{item.city}}
+                </td>
+                <td>
+                    {{item.email}}
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
