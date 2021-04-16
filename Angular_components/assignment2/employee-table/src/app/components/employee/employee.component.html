@@ -1,0 +1,69 @@
+<div class="container">
+    <h2>Data Of Employee</h2>
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Employee_Id</th>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Dept</th>
+                <th>City</th>
+                <th>Email</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees">
+
+                <td>
+                    {{emp.employee_id}}
+                </td>
+                <td>
+                    {{emp.first_name}}
+                </td>
+                <td>
+                    {{emp.last_name}}
+                </td>
+                <td>
+                    {{emp.dept}}
+                </td>
+                <td>
+                    {{emp.City}}
+                </td>
+                <td>
+                    {{emp.email}}
+                </td>
+                <td>
+
+
+                    <ul class="list-inline m-0">
+                        <!--li class="list-inline-item">
+                            <button class="btn btn-primary btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                data-placement="top" title="Add"><i class="fa fa-table"></i></button>
+                            </li!-->
+                        <li class="list-inline-item">
+                            <button (click)="Edit(emp.employee_id)" class="btn btn-success btn-sm rounded-0"
+                                type="button" data-toggle="tooltip" data-placement="top" title="Edit"><i
+                                    class="fa fa-edit"></i></button>
+                        </li>
+                        <li class="list-inline-item">
+                            <button class="btn btn-danger btn-sm rounded-0" type="button" data-toggle="tooltip"
+                                data-placement="top" title="Delete"><i class="fa fa-trash"></i></button>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
+<div class="container" *ngIf="flag">
+    Employee-Id: <input [disabled]="true" type="text" [(ngModel)]="editObj.employee_id"><br /><br />
+    First_name: <input type="text" [(ngModel)]="editObj.first_name"><br /><br />
+    Last_name: <input type="text" [(ngModel)]="editObj.last_name"><br /><br />
+    dept: <input type="text" [(ngModel)]="editObj.dept"><br /><br />
+    City: <input type="text" [(ngModel)]="editObj.City"><br /><br />
+    Email: <input type="text" [(ngModel)]="editObj.email">
+</div>
