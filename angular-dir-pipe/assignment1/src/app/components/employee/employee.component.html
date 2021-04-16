@@ -1,0 +1,43 @@
+<div class="container">
+
+
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th>Employee_Id</th>
+                <th>First_name</th>
+                <th>Last_name</th>
+                <th>Dept</th>
+                <th>City</th>
+                <th>Email</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let emp of employees" appColor>
+
+                <td>
+                    {{emp.employee_id}}
+                </td>
+                <td>
+                    {{emp.first_name}}
+                </td>
+                <td>
+                    {{emp.last_name}}
+                </td>
+                <td>
+                    {{emp.dept}}
+                </td>
+                <td>
+                    {{emp.City}}
+                </td>
+                <td>
+                    {{emp.email}}
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+
+</div>
